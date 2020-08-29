@@ -2,7 +2,7 @@ import numpy as np
 from tensorflow import keras
 import cv2
 import time
-from read_images import flatten_and_normalize
+from ann.read_images import flatten_and_normalize
 
 # Read model from folder
 model = keras.models.load_model('data/model')
@@ -19,7 +19,7 @@ while True:
     prediction = model.predict(np.array([flatten_and_normalize(scaled_frame)]))
 
     print(prediction, end=' ')
-    if prediction[0] > 0.5:
+    if prediction[0] > 0.7:
         print('Something in image')
     else:
         print('nothing...')

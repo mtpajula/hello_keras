@@ -1,7 +1,7 @@
 
 # Keras test
 
-As simple as possible. Basic ANN.
+As simple as possible. Basic ANN. and basic CNN
 
 Usage:
 

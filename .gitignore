@@ -130,7 +130,7 @@ dmypy.json
 
 .idea
 
-data/raw/*
-data/0/*
-data/1/*
-data/model/
+01_ann/data/raw/*
+01_ann/data/0/*
+01_ann/data/1/*
+01_ann/data/model/

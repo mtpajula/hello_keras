@@ -1,0 +1,8 @@
+
+data/raw/*
+data/train/0/*
+data/train/1/*
+data/validate/0/*
+data/validate/1/*
+data/model/
+data/best/

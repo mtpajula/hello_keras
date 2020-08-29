@@ -2,7 +2,7 @@ import numpy as np
 from tensorflow import keras
 from tensorflow.keras import layers
 import glob
-from read_images import image_to_list
+from ann.read_images import image_to_list
 
 
 images_data = []
@@ -40,7 +40,10 @@ model.summary()
 
 # compile and learn
 model.compile(optimizer='sgd', loss='mse')
-model.fit(input_data, expected_output, batch_size=100, epochs=1000)
+
+es_callback = keras.callbacks.EarlyStopping(monitor='val_loss', patience=3)
+
+model.fit(input_data, expected_output, batch_size=50, epochs=1000)
 
 # Save to folder
 model.save('data/model')
